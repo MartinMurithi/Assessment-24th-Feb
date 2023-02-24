@@ -7,7 +7,9 @@
 function reverseGroupsOfFour(str) {
   let newStr = "";
 
-
+    for (let i = 0; i < str.length; i++){
+        newStr = str.split('').substring(i, i + 3);
+    }
 
   // Return the transformed string
   return newStr;
