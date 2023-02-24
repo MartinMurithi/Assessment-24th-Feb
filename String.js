@@ -4,15 +4,14 @@
 
 // When S = ' Tempor ip' the output should be ' pmeTi rop'
 
-function reverseGroupsOfFour(str) {
-  let newStr = "";
 
-    for (let i = 0; i < str.length; i++){
-        newStr = str.split('').substring(i, i + 3);
-    }
-
-  // Return the transformed string
-  return newStr;
+function reverseGroupsOfFour(S) {
+  let result = '';
+  for (let i = 0; i < S.length; i += 4) {
+    let group = S.slice(i, i + 4);
+    let reversed = group.split('').reverse().join('');
+    result += reversed;
+  }
+  return result;
 }
-
-console.log(reverseGroupsOfFour("martin"));
+console.log(reverseGroupsOfFour('Martin Wachira'));

@@ -1,13 +1,12 @@
 class Employee {
-  constructor(name, role) {
+  constructor(name) {
       this.name = name;
-      this.role = role;
   }
 
   getDetails() {
-    console.log(`Name: ${this.name}, Role:${this.role}`);
+    console.log(`Name: ${this.name}`);
   }
 }
 
-const emp = new Employee("Martin", "Manager");
+const emp = new Employee("Martin");
 emp.getDetails();
