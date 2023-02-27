@@ -4,14 +4,24 @@
 
 // When S = ' Tempor ip' the output should be ' pmeTi rop'
 
+// Question 2
+// function reverseIntoFour(str) {
+//   let result = "";
+//   for (let i = 0; i < str.length; i += 4) {
+//     const fourChars = str.slice(i, i + 4);
+//     result += fourChars.split("").reverse().join("");
+//   }
+//   return result;
+// }
+// console.log(reverseIntoFour("Lorem at"));
 
-function reverseGroupsOfFour(S) {
-  let result = '';
-  for (let i = 0; i < S.length; i += 4) {
-    let group = S.slice(i, i + 4);
-    let reversed = group.split('').reverse().join('');
-    result += reversed;
+// Question 2
+function reverseStringInGroupsOfFour(string) {
+  let result = "";
+  for (let i = 0; i < string.length; i += 4) {
+    const groupof4 = string.slice(i, i + 4);
+    result += groupof4.split("").reverse().join("");
   }
   return result;
 }
-console.log(reverseGroupsOfFour('Martin Wachira'));
+console.log(reverseStringInGroupsOfFour("Lorem at"));
